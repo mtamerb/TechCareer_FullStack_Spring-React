@@ -1,4 +1,4 @@
-package com.hamitmizrak.bean;
+package com.tamerb.bean;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.hamitmizrak.bean;
+package com.tamerb.bean;
 
 
 import io.swagger.v3.oas.models.OpenAPI;

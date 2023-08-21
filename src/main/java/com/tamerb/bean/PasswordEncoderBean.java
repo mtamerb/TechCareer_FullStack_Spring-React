@@ -1,4 +1,4 @@
-package com.hamitmizrak.bean;
+package com.tamerb.bean;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

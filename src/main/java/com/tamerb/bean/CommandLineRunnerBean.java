@@ -1,4 +1,4 @@
-package com.hamitmizrak.bean;
+package com.tamerb.bean;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.CommandLineRunner;
