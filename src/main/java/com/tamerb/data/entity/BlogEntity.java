@@ -1,6 +1,7 @@
 package com.tamerb.data.entity;
 
 
+import com.tamerb.auditing.AuditingAwareBaseEntity;
 import com.tamerb.data.BlogEntityEmbeddable;
 import jakarta.persistence.*;
 import jakarta.persistence.*;
@@ -24,7 +25,7 @@ import java.util.Date;
 @Entity
 @Table(name = "blogs")
 // Blog(N) Categories(1)
-public class BlogEntity {
+public class BlogEntity extends AuditingAwareBaseEntity implements Serializable {
 
     // serileştirme
     public static final Long serialVersionUID = 1L;

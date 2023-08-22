@@ -3,7 +3,6 @@ package com.tamerb.data;
 
 // yukleri paylasalım
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Lob;
