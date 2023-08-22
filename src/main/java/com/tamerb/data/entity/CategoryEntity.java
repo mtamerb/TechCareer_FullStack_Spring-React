@@ -1,5 +1,6 @@
 package com.tamerb.data.entity;
 
+import com.tamerb.auditing.AuditingAwareBaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,7 +23,7 @@ import java.util.Date;
 @Entity
 @Table(name = "categories")
 // Categories(1)  Blog(N)
-public class CategoryEntity implements Serializable {
+public class CategoryEntity extends AuditingAwareBaseEntity implements Serializable {
 
     // Serileştirme
     public static final Long serialVersionUID = 1L;
