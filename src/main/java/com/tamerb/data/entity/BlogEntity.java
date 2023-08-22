@@ -4,11 +4,7 @@ package com.tamerb.data.entity;
 import com.tamerb.auditing.AuditingAwareBaseEntity;
 import com.tamerb.data.BlogEntityEmbeddable;
 import jakarta.persistence.*;
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -17,9 +13,6 @@ import java.util.Date;
 
 // LOMBOK
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @Log4j2
 // ENTITY
 @Entity
@@ -49,4 +42,32 @@ public class BlogEntity extends AuditingAwareBaseEntity implements Serializable 
    @Transient
     private String justJava;
     */
+
+    // relation
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "category_id", nullable = false)
+    CategoryEntity relationCategoryEntity;
+
+
+    public BlogEntity(){}
+
+    public BlogEntity(BlogEntityEmbeddable blogEntityEmbeddable, CategoryEntity relationCategoryEntity) {
+        this.blogEntityEmbeddable = blogEntityEmbeddable;
+        this.relationCategoryEntity = relationCategoryEntity;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
